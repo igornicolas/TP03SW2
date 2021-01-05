@@ -1,0 +1,49 @@
+﻿@model TP03SW2.Models.BL
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Excluir</h2>
+
+
+<div>
+    <h4>BL</h4>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Consignee)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Navio)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Numero)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Consignee)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Navio)
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h4>Você tem certeza que gostaria de excluir este BL?</h4>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BLId" />
+        <a class="btn btn-dark" asp-action="Index">Voltar</a> | <input class="btn btn-danger" type="submit" value="Excluir"  />
+        
+    </form>
+</div>

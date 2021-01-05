@@ -1,0 +1,55 @@
+﻿@model TP03SW2.Models.Container
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Excluir</h3>
+
+
+<div>
+    <h4>Container</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tamanho)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BL)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Numero)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Tipo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Tamanho)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.BL.BLId)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Você realmente deseja excluir esse container?</h4>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ContainerId" />
+        <a class="btn btn-dark" asp-action="Index">Voltar</a> | <input type="submit" value="Excluir" class="btn btn-danger" />
+
+    </form>
+</div>

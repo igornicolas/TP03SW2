@@ -1,0 +1,47 @@
+﻿@model TP03SW2.Models.BL
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>BL</h4>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Consignee)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Navio)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Numero)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Consignee)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Navio)
+                </td>
+            </tr>
+        </tbody>
+        
+       
+    </table>
+</div>
+<div>
+    <a class="btn btn-dark" asp-action="Index">Voltar</a> | <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.BLId">Editar</a>
+</div>

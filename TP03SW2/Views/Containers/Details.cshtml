@@ -1,0 +1,53 @@
+﻿@model TP03SW2.Models.Container
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Container</h4>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tamanho)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BL)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Numero)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Tipo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Tamanho)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.BL.BLId)
+                </td>
+            </tr>
+        </tbody>
+       
+    </table>
+</div>
+<div>
+    <a class="btn btn-dark" asp-action="Index">Voltar</a> | <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.ContainerId">Editar</a>
+</div>
